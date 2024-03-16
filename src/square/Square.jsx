@@ -69,7 +69,10 @@ const Square = ({ id,finishedArrayState, setGameState,currentPlayer,setCurrentPl
     }
 
     return (
-        <div onClick={clickOnSquare} className={`square ${finishedState?"not-allowed":''}`}id={id}>{icon}</div>
+        <div 
+        onClick={clickOnSquare} 
+        className={`square ${finishedState?"not-allowed":''} 
+        ${finishedArrayState.includes(id)?finishedState+'-won':''}`}>{icon}</div>
     )
 }
 
